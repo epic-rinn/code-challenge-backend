@@ -100,7 +100,7 @@ curl -s 'http://localhost:3000/birds/1'
 - Update a bird
 
 ```sh
-curl -sS -X PUT http://localhost:3000/birds/1 \
+curl -sS -X PUT http://localhost:3000/birds/2 \
   -H 'Content-Type: application/json' \
   --data '{"name":"House Sparrow","habitat":"Urban"}'
 ```

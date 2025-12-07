@@ -1,10 +1,4 @@
-import {
-  listBirds,
-  getBird,
-  createBird,
-  updateBird,
-  deleteBird,
-} from "../models/birds";
+import * as BirdModel from "../models/birds";
 
 export const getAllBirds = ({
   species,
@@ -22,16 +16,16 @@ export const getAllBirds = ({
   const p = Math.max(1, Number(page || 1));
   const ps = Math.max(1, Number(pageSize || 10));
 
-  const result = listBirds({ species, name, habitat }, p, ps);
+  const result = BirdModel.listBirds({ species, name, habitat }, p, ps);
 
   return result;
 };
 
 export const getBirdById = (id: number) => {
-  return getBird(id);
+  return BirdModel.getBird(id);
 };
 
-export const createBirdService = ({
+export const createBird = ({
   name,
   species,
   habitat,
@@ -40,10 +34,10 @@ export const createBirdService = ({
   species?: string | null;
   habitat?: string | null;
 }) => {
-  return createBird({ name, species, habitat });
+  return BirdModel.createBird({ name, species, habitat });
 };
 
-export const updateBirdService = (
+export const updateBird = (
   id: number,
   data: {
     name?: string | null;
@@ -51,9 +45,9 @@ export const updateBirdService = (
     habitat?: string | null;
   }
 ) => {
-  return updateBird(id, data);
+  return BirdModel.updateBird(id, data);
 };
 
-export const deleteBirdService = (id: number) => {
-  return deleteBird(id);
+export const deleteBird = (id: number) => {
+  return BirdModel.deleteBird(id);
 };

@@ -180,7 +180,14 @@ export const openApiSpec = {
           },
         ],
         responses: {
-          "204": { description: "Deleted" },
+          "204": {
+            description: "Deleted",
+            content: {
+              "application/json": {
+                schema: { $ref: "#/components/schemas/SuccessResponse" },
+              },
+            },
+          },
           "404": {
             description: "Not found",
             content: {
@@ -235,6 +242,11 @@ export const openApiSpec = {
           species: { type: "string", nullable: true },
           habitat: { type: "string", nullable: true },
         },
+      },
+      SuccessResponse: {
+        type: "object",
+        properties: { message: { type: "string" } },
+        required: ["message"],
       },
       ErrorResponse: {
         type: "object",

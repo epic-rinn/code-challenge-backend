@@ -1,7 +1,7 @@
 import { Router } from "express";
 import {
-  getBirds,
-  getBirdById,
+  getBirdsHandler,
+  getBirdByIdHandler,
   createBirdHandler,
   updateBirdHandler,
   deleteBirdHandler,
@@ -9,8 +9,8 @@ import {
 
 const router = Router();
 
-router.get("/", getBirds);
-router.get("/:id", getBirdById);
+router.get("/", getBirdsHandler);
+router.get("/:id", getBirdByIdHandler);
 router.post("/", createBirdHandler);
 router.put("/:id", updateBirdHandler);
 router.delete("/:id", deleteBirdHandler);
