@@ -8,7 +8,7 @@ Short description
 Setup
 
 - `cd problem-4`
-- `pnpm i --frozen-lockfile`
+- `pnpm i`
 
 Test
 
