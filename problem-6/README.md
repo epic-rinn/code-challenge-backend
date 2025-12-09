@@ -2,7 +2,7 @@
 
 The document specifies the comprehensive specification of the architecture for real-time scoreboard module that displays top 10 user scores and the submission of action completion by the authorized user.
 
-![Scoreboard Architecture Diagram](diagram.png)
+![Scoreboard Architecture Diagram](Architecture.png)
 
 ## 1. System Flow
 
